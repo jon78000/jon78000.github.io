@@ -1,8 +1,5 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jon78000</title>
     <link rel="icon" href="https://cdn.discordapp.com/attachments/1332432228776415302/1332459829549203507/360fx360f.png?ex=6795556b&is=679403eb&hm=4741ab973cdff6b9e43d19e7c6f1cdeb5415f476c956a54b11e31dd9d5c0ddc4&">
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -15,12 +12,12 @@
             text-align: center;
             height: 100vh;
             margin: 0;
-            background-color: #000; /* Background color */
-            color: #fff; /* Text color for better visibility */
+            background-color: #000; /* Optional: Set a background color */
+            color: #fff; /* Optional: Set text color for visibility */
         }
 
         .content {
-            max-width: 90%; /* Ensure content doesn't overflow on smaller screens */
+            max-width: 90%; /* Optional: Ensure content doesn't overflow on smaller screens */
         }
 
         pre.ascii {
@@ -29,17 +26,8 @@
         }
 
         a {
-            color: #00f; /* Link color */
+            color: #00f; /* Optional: Change link color */
             text-decoration: none;
-        }
-
-        #fullscreen-button {
-            background-color: #444;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
         }
     </style>
 </head>
@@ -47,22 +35,14 @@
     <div id="fullscreen-button">Enter</div>
     <audio id="zene">
         <source src="media/geeked #clown2025 😗🤡 - aeter.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
     </audio>
 
     <script type="text/javascript">
         var button = document.getElementById('fullscreen-button');
-        var audio = document.getElementById('zene'); // Reference the existing audio element
-
+        var audio = new Audio('zene');
         button.addEventListener('click', function () {
-            // Allow the audio to play only after user interaction
-            audio.play().then(() => {
-                console.log("Audio is playing.");
-                button.style.display = 'none'; // Hide the button
-            }).catch(error => {
-                console.error("Audio failed to play:", error);
-                alert("Audio playback failed. Please check browser settings or audio file.");
-            });
+            audio.play();
+            button.style.display = 'none';
         });
     </script>
 
